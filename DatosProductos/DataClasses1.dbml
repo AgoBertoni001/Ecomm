@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Ecommerce" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-F1AHD1I\ESCDIRECTASQL;Initial Catalog=Ecommerce;Integrated Security=True" SettingsObjectName="DatosProductos.Properties.Settings" SettingsPropertyName="EcommerceConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Producto" Member="Producto">
+    <Type Name="Producto">
+      <Column Name="codigo" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombreProducto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="precio" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="stock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fechaDeAlta" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idMarca" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idTipo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idTemporada" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idSexo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idColor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idTalle" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idPromocion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idCalificacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="imagen" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="Calificacion_Producto" Member="Calificacion" ThisKey="idCalificacion" OtherKey="id" Type="Calificacion" IsForeignKey="true" />
+      <Association Name="Color_Producto" Member="Color" ThisKey="idColor" OtherKey="id" Type="Color" IsForeignKey="true" />
+      <Association Name="Marca_Producto" Member="Marca" ThisKey="idMarca" OtherKey="id" Type="Marca" IsForeignKey="true" />
+      <Association Name="Promocion_Producto" Member="Promocion" ThisKey="idPromocion" OtherKey="id" Type="Promocion" IsForeignKey="true" />
+      <Association Name="Sexo_Producto" Member="Sexo" ThisKey="idSexo" OtherKey="id" Type="Sexo" IsForeignKey="true" />
+      <Association Name="Talle_Producto" Member="Talle" ThisKey="idTalle" OtherKey="id" Type="Talle" IsForeignKey="true" />
+      <Association Name="Temporada_Producto" Member="Temporada" ThisKey="idTemporada" OtherKey="id" Type="Temporada" IsForeignKey="true" />
+      <Association Name="Tipo_Producto" Member="Tipo" ThisKey="idTipo" OtherKey="id" Type="Tipo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Calificacion" Member="Calificacion">
+    <Type Name="Calificacion">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="valoracion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Calificacion_Producto" Member="Producto" ThisKey="id" OtherKey="idCalificacion" Type="Producto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Color" Member="Color">
+    <Type Name="Color">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombreColor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Color_Producto" Member="Producto" ThisKey="id" OtherKey="idColor" Type="Producto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Marca" Member="Marca">
+    <Type Name="Marca">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombreMarca" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Marca_Producto" Member="Producto" ThisKey="id" OtherKey="idMarca" Type="Producto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Promocion" Member="Promocion">
+    <Type Name="Promocion">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombrePromocion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Promocion_Producto" Member="Producto" ThisKey="id" OtherKey="idPromocion" Type="Producto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sexo" Member="Sexo">
+    <Type Name="Sexo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombreSexo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Sexo_Producto" Member="Producto" ThisKey="id" OtherKey="idSexo" Type="Producto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Talle" Member="Talle">
+    <Type Name="Talle">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="medida" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Talle_Producto" Member="Producto" ThisKey="id" OtherKey="idTalle" Type="Producto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temporada" Member="Temporada">
+    <Type Name="Temporada">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombreTemporada" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Temporada_Producto" Member="Producto" ThisKey="id" OtherKey="idTemporada" Type="Producto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tipo" Member="Tipo">
+    <Type Name="Tipo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombreTipo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Tipo_Producto" Member="Producto" ThisKey="id" OtherKey="idTipo" Type="Producto" />
+    </Type>
+  </Table>
+  <Function Name="dbo.eliminaProducto" Method="eliminaProducto">
+    <Parameter Name="codigo" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.mostrarProducto" Method="mostrarProducto">
+    <ElementType Name="mostrarProductoResult">
+      <Column Name="codigo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nombreProducto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="precio" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="stock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nombreMarca" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nombreTipo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nombreTemporada" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nombreSexo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nombreColor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="medida" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nombrePromocion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="valoracion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="imagen" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.insertarProducto" Method="insertarProducto">
+    <Parameter Name="codigo" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="nombreProducto" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="precio" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="stock" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fechaDeAlta" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="idMarca" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idTipo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idTemporada" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSexo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idColor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idTalle" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPromocion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idCalificacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="imagen" Type="System.String" DbType="NVarChar(250)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.modificaProducto" Method="modificaProducto">
+    <Parameter Name="codigo" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="nombreProducto" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="precio" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="stock" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fechaDeAlta" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="idMarca" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idTipo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idTemporada" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSexo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idColor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idTalle" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPromocion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idCalificacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="imagen" Type="System.String" DbType="NVarChar(250)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.actualizarProductos" Method="actualizarProductos">
+    <Parameter Name="codigo" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="nombreProducto" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="precio" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="stock" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fechaDeAlta" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="idMarca" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idTipo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idTemporada" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSexo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idColor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idTalle" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPromocion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idCalificacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="imagen" Type="System.String" DbType="NVarChar(250)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.obtenerProductos" Method="obtenerProductos">
+    <ElementType Name="obtenerProductosResult">
+      <Column Name="codigo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nombreProducto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="precio" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="stock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fechaDeAlta" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idMarca" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idTipo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idTemporada" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idSexo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idColor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idTalle" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idPromocion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idCalificacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="imagen" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
