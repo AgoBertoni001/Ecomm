@@ -4,24 +4,34 @@
 
     <div class="jumbotron">
         <div>	
-			 <asp:GridView ID="gvdProductos" runat="server" AutoGenerateColumns="false" >
+			<h1>PRODUCTOS</h1>
+
+			 <asp:GridView ID="gvdProductos" runat="server" AutoGenerateColumns="true" DataKeyNames="Codigo" >
                 <Columns>
-                    <asp:BoundField DataField="codigo" HeaderText="Codigo" />
-                    <asp:BoundField DataField="nombreProducto" HeaderText="Nombre" />
-                    <asp:BoundField DataField="descripcion" HeaderText="Descripcion" />
-                    <asp:BoundField DataField="precio" HeaderText="Precio" />
-                    <asp:BoundField DataField="stock" HeaderText="Stock" />
-                    <asp:BoundField DataField="fechaDeAlta" HeaderText="Fecha De Alta" />
-                    <asp:BoundField DataField="iMarca" HeaderText="Marca" /> 
-                    <asp:BoundField DataField="idMarca" HeaderText="Marca" />
-                    <asp:BoundField DataField="idTipo" HeaderText="Tipo" />
-                    <asp:BoundField DataField="idTemporada" HeaderText="Temporada" />
-                    <asp:BoundField DataField="idSexo" HeaderText="Sexo" />
-                    <asp:BoundField DataField="idColor" HeaderText="Color" />
-                    <asp:BoundField DataField="idTalle" HeaderText="Talle" />
-                    <asp:BoundField DataField="idPromocion" HeaderText="Promoción" />
-                    <asp:BoundField DataField="idCalificacion" HeaderText="Calificacion" />
-                    <asp:BoundField DataField="imagen" HeaderText="imagen" />
+                    <asp:BoundField DataField="Codigo" HeaderText="Codigo :)" />
+                    <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
+                    <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" />
+                    <asp:BoundField DataField="Precio" HeaderText="Precio" />
+                    <asp:BoundField DataField="Stock" HeaderText="Stock" />
+                    <asp:BoundField DataField="Marca" HeaderText="Marca" /> 
+                    <asp:BoundField DataField="Tipo" HeaderText="Tipo" />
+                    <asp:BoundField DataField="Temporada" HeaderText="Temporada" />
+                    <asp:BoundField DataField="Sexo" HeaderText="Sexo" />
+                    <asp:BoundField DataField="Color" HeaderText="Color" />
+                    <asp:BoundField DataField="Medida" HeaderText="Talle" />
+                    <asp:BoundField DataField="Promocion" HeaderText="Promoción" />
+                    <asp:BoundField DataField="Valoracion" HeaderText="Calificacion" />
+                    <asp:BoundField DataField="Imagen" HeaderText="Imagen" />
+					<asp:TemplateField>
+						<ItemTemplate>
+							<asp:LinkButton ID="lkbActualizar" runat="server" Text="Actualizar" OnClick="lkbActualizar_Click"/>
+						</ItemTemplate>
+					</asp:TemplateField>
+					<asp:TemplateField>
+						<ItemTemplate>
+							<asp:LinkButton ID="lkbEliminar" runat="server" Text="Eliminar" OnClick="lkbEliminar_Click" />
+						</ItemTemplate>
+					</asp:TemplateField>
                 </Columns>
             </asp:GridView>
         </div>
@@ -100,7 +110,7 @@
                 
                     <br />
                 <asp:Button ID="btnGuardarProducto" runat="server" Text="Guardar Producto" OnClick="btnGuardarProducto_Click" />
-				
+				<asp:Button ID="btnActualizar" runat="server" Text="Actualizar Producto" OnClick="btnActualizar_Click" />
                 </asp:Panel>
 
 

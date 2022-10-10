@@ -178,4 +178,22 @@
       <Column Name="imagen" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.SPSProductos" Method="SPSProductos">
+    <ElementType Name="SPSProductosResult">
+      <Column Name="Codigo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreProducto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Stock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Marca" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Temporada" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sexo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Talle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Promocion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Calificacion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Imagen" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

@@ -72,7 +72,7 @@ namespace LogicaProducto
                 using (DataClasses1DataContext db =new DataClasses1DataContext())
                 {
                     //va al procedimiento almacenado y recupera todos los datos que almacena
-                    return dt = CustomDataTable.CopyToDataTable(db.mostrarProducto().ToArray());
+                    return dt = CustomDataTable.CopyToDataTable(db.SPSProductos().ToArray());
                 }
             }
             catch (Exception)
