@@ -3,12 +3,13 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <div>	
-			<h1>PRODUCTOS</h1>
+	
+			<h1>PRODUCTOS</h1>		
 
-			 <asp:GridView ID="gvdProductos" runat="server" AutoGenerateColumns="true" DataKeyNames="Codigo" >
+			 <asp:GridView ID="gvdProductos" runat="server" AutoGenerateColumns="false" DataKeyNames="Codigo" >
                 <Columns>
-                    <asp:BoundField DataField="Codigo" HeaderText="Codigo :)" />
+
+                    <asp:BoundField DataField="Codigo" HeaderText="Codigo" />
                     <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
                     <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" />
                     <asp:BoundField DataField="Precio" HeaderText="Precio" />
@@ -22,23 +23,23 @@
                     <asp:BoundField DataField="Promocion" HeaderText="Promoción" />
                     <asp:BoundField DataField="Valoracion" HeaderText="Calificacion" />
                     <asp:BoundField DataField="Imagen" HeaderText="Imagen" />
+
 					<asp:TemplateField>
 						<ItemTemplate>
 							<asp:LinkButton ID="lkbActualizar" runat="server" Text="Actualizar" OnClick="lkbActualizar_Click"/>
 						</ItemTemplate>
 					</asp:TemplateField>
+
 					<asp:TemplateField>
 						<ItemTemplate>
 							<asp:LinkButton ID="lkbEliminar" runat="server" Text="Eliminar" OnClick="lkbEliminar_Click" />
 						</ItemTemplate>
 					</asp:TemplateField>
+
                 </Columns>
             </asp:GridView>
-        </div>
-		
+	</div>
 
-       
-         </div>
 
 	<div>
 		<asp:Button ID="btnNuevoProducto" runat="server" OnClick="btnNuevoProducto_Click" Text="Nuevo Producto"/>
