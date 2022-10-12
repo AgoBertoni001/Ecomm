@@ -3,14 +3,14 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-	
+		<div>	
 			<h1>PRODUCTOS</h1>		
 
 			 <asp:GridView ID="gvdProductos" runat="server" AutoGenerateColumns="false" DataKeyNames="Codigo" >
                 <Columns>
 
                     <asp:BoundField DataField="Codigo" HeaderText="Codigo" />
-                    <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
+                    <asp:BoundField DataField="NombreProducto" HeaderText="Nombre Producto" />
                     <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" />
                     <asp:BoundField DataField="Precio" HeaderText="Precio" />
                     <asp:BoundField DataField="Stock" HeaderText="Stock" />
@@ -19,9 +19,9 @@
                     <asp:BoundField DataField="Temporada" HeaderText="Temporada" />
                     <asp:BoundField DataField="Sexo" HeaderText="Sexo" />
                     <asp:BoundField DataField="Color" HeaderText="Color" />
-                    <asp:BoundField DataField="Medida" HeaderText="Talle" />
+                    <asp:BoundField DataField="Talle" HeaderText="Talle" />
                     <asp:BoundField DataField="Promocion" HeaderText="Promoción" />
-                    <asp:BoundField DataField="Valoracion" HeaderText="Calificacion" />
+                    <asp:BoundField DataField="Calificacion" HeaderText="Calificacion" />
                     <asp:BoundField DataField="Imagen" HeaderText="Imagen" />
 
 					<asp:TemplateField>
@@ -38,6 +38,7 @@
 
                 </Columns>
             </asp:GridView>
+		</div>
 	</div>
 
 

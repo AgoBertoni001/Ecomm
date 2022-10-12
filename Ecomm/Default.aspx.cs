@@ -22,6 +22,7 @@ namespace Ecomm
             }
              
         }
+        //hace que se llene el gridview
         public void CargarProductos()
         {
             gvdProductos.DataSource = db.Recupera();
