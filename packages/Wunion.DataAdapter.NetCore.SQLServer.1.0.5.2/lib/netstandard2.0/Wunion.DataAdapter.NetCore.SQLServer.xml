@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wunion.DataAdapter.NetCore.SQLServer</name>
+    </assembly>
+    <members>
+        <member name="T:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerFunParser">
+            <summary>
+            Microsoft SQL Server 的函数解释器。
+            </summary>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerFunParser.#ctor(Wunion.DataAdapter.Kernel.CommandParser.ParserAdapter)">
+            <summary>
+            实例化一个 Microsoft SQL Server 的函数解释器。
+            </summary>
+            <param name="adapter">所属的父级适配器。</param>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerFunParser.Parsing(System.Collections.Generic.List{System.Data.IDbDataParameter}@)">
+            <summary>
+            解释当前的函数语句。
+            </summary>
+            <param name="DbParameters">用于缓存在解释过程中可能会产生的参数。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerFunParser.NowParsing(Wunion.DataAdapter.Kernel.CommandBuilders.FunDescription,System.Collections.Generic.List{System.Data.IDbDataParameter}@)">
+            <summary>
+            Now 函数解释。
+            </summary>
+            <param name="D"></param>
+            <param name="DbParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerFunParser.LenParsing(Wunion.DataAdapter.Kernel.CommandBuilders.FunDescription,System.Collections.Generic.List{System.Data.IDbDataParameter}@)">
+            <summary>
+            Len 函数解释。
+            </summary>
+            <param name="D"></param>
+            <param name="DbParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerFunParser.SubstringParsing(Wunion.DataAdapter.Kernel.CommandBuilders.FunDescription,System.Collections.Generic.List{System.Data.IDbDataParameter}@)">
+            <summary>
+            Substring 函数解释。
+            </summary>
+            <param name="D"></param>
+            <param name="DbParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerFunParser.DatePartParsing(Wunion.DataAdapter.Kernel.CommandBuilders.FunDescription,System.Collections.Generic.List{System.Data.IDbDataParameter}@)">
+            <summary>
+            DatePart 函数解释。
+            </summary>
+            <param name="D"></param>
+            <param name="DbParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerParserAdapter">
+            <summary>
+            适用于 Microsoft SQL Server 2008 R2 SP1 及以上版本的解释适配器。
+            </summary>
+        </member>
+        <member name="P:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerParserAdapter.IdentityCommand">
+            <summary>
+            获取用于取得当前会话的最后一个自增长字段值的命令。
+            </summary>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerParserAdapter.InitializeParsers">
+            <summary>
+            初始化所有命令解释器.
+            </summary>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerParserAdapter.CreateDbParameter(System.String,System.Object)">
+            <summary>
+            创建命令中的参数。
+            </summary>
+            <param name="parameterName">参数名称。</param>
+            <param name="value">参数的值。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerParserAdapter.CreateDbParameter(System.String,System.Object,System.Data.ParameterDirection)">
+            <summary>
+            创建命令中的参数。
+            </summary>
+            <param name="parameterName">参数名称。</param>
+            <param name="value">参数的值。</param>
+            <param name="direction">获取或设置一个值，该值指示参数是只可输入、只可输出、双向还是存储过程返回值参数。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerParserAdapter.IdentityInsertCommand(System.String,System.Boolean)">
+            <summary>
+            返回开启或关闭指定表中自增长字段的命令文本。
+            </summary>
+            <param name="table">表名称。</param>
+            <param name="enabled">开启为true，关闭则为false</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerSelectBlockParser">
+            <summary>
+            Microsoft SQL Server 2005 及以上版本的 SELECT 命令解释器。
+            </summary>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerSelectBlockParser.#ctor(Wunion.DataAdapter.Kernel.CommandParser.ParserAdapter)">
+            <summary>
+            实例化一个 Microsoft SQL Server 2005 及以上版本的 SELECT 命令解释器
+            </summary>
+            <param name="adapter">所属的父级适配器。</param>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerSelectBlockParser.ParsingCore(Wunion.DataAdapter.Kernel.CommandBuilders.SelectBlock,System.Collections.Generic.List{System.Data.IDbDataParameter}@)">
+            <summary>
+            分布关键的命令部份解释。
+            </summary>
+            <param name="sBlock">SELECT命令段描述对象。</param>
+            <param name="DbParameters">用于缓存在解释过程中可能会产生的参数。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerSelectBlockParser.ParsingWithPage(Wunion.DataAdapter.Kernel.CommandBuilders.SelectBlock,System.Collections.Generic.List{System.Data.IDbDataParameter}@)">
+            <summary>
+            按分页的方式解释 SELECT 命令。
+            </summary>
+            <param name="sBlock">SelectBlock对象。</param>
+            <param name="DbParameters">用于缓存在解释过程中可能会产生的参数。</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerTableBuildParser">
+            <summary>
+            CREATE TABLE 命令解释器.
+            </summary>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerTableBuildParser.#ctor(Wunion.DataAdapter.Kernel.CommandParser.ParserAdapter)">
+            <summary>
+            创建一个 <see cref="T:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerTableBuildParser"/> 的对象实例.
+            </summary>
+            <param name="adapter">所属的父级适配器。</param>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerTableBuildParser.Parsing(System.Collections.Generic.List{System.Data.IDbDataParameter}@)">
+            <summary>
+            解释 CREATE TABLE 命令.
+            </summary>
+            <param name="DbParameters">用于缓存在解释过程中可能会产生的参数。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerTableBuildParser.ParseDbType(Wunion.DataAdapter.Kernel.CommandBuilders.DbTableColumnDefinition)">
+            <summary>
+            解析指定列定义的数据类型.
+            </summary>
+            <param name="definition">列定义信息.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerTableBuildParser.ParseDefaultValue(Wunion.DataAdapter.Kernel.CommandBuilders.DbTableColumnDefinition,System.Collections.Generic.List{System.Data.IDbDataParameter}@)">
+            <summary>
+            列的解析默认值设置.
+            </summary>
+            <param name="definition"></param>
+            <param name="DbParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.CommandParser.SqlServerTableBuildParser.ParseForeignKey(System.String,Wunion.DataAdapter.Kernel.CommandBuilders.DbTableColumnDefinition,System.Text.StringBuilder)">
+            <summary>
+            解析列的外键设置.
+            </summary>
+            <param name="table">当前表名.</param>
+            <param name="definition">列定义信息.</param>
+            <param name="writer">将外键命令段写入该缓冲区.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wunion.DataAdapter.Kernel.SQLServer.SqlServerDbAccess">
+            <summary>
+            适用于 Microsoft SQL Server 2008 R2 SP1 及以上版本的数据访问器对象类型。
+            </summary>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.SqlServerDbAccess.#ctor">
+            <summary>
+            创建一个 <see cref="T:Wunion.DataAdapter.Kernel.SQLServer.SqlServerDbAccess"/> 的对象实现。
+            </summary>
+        </member>
+        <member name="P:Wunion.DataAdapter.Kernel.SQLServer.SqlServerDbAccess.IdentityCommand">
+            <summary>
+            获取用于取得当前会话的最后一个自增长字段值的命令。
+            </summary>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.SqlServerDbAccess.DropTableCommandText(System.String,System.Data.IDbCommand)">
+            <summary>
+            用于获取删除表的命令.
+            </summary>
+            <param name="tableName">要删除的表名.</param>
+            <param name="command">用于执行在获取删除表命令时可能需要进行的查询（如删除表后相关的约束残留信息的删除命令）.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.SqlServerDbAccess.CreateConnection">
+            <summary>
+            用于创建数据库连接.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.SqlServerDbAccess.CreateDbCommand">
+            <summary>
+            创建要对数据库执行 SQL 命令或存储过程的对象。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.SqlServerDbAccess.TableExists(System.String,System.Data.IDbCommand)">
+            <summary>
+            若指定名称的表在数据库中存在则返回 true，否则返回 false .
+            </summary>
+            <param name="tableName">表名称.</param>
+            <param name="commander">在该 DbCommand 上执行查询（为空时则自动创建，默认值 null）.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.SqlServerDbAccess.IdentityInsert(System.String,System.Boolean)">
+            <summary>
+            开启或关闭指定表中自增长字段值的插入操作。
+            </summary>
+            <param name="table">表名。</param>
+            <param name="enabled">是否启用（为true时启用，若要关闭则为false）。</param>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.SqlServerDbAccess.ExecuteNoneQuery(Wunion.DataAdapter.Kernel.CommandBuilders.CommandBuilder)">
+            <summary>
+            执行指定的 SQL 命令，并返回受影响的记录数。
+            </summary>
+            <param name="Command">要执行的命令。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.SqlServerDbAccess.QueryDataTable(Wunion.DataAdapter.Kernel.CommandBuilders.CommandBuilder)">
+            <summary>
+            指行指定的查询命令，并返回数据集。
+            </summary>
+            <param name="Command">要执行的查询。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.SqlServerDbAccess.ExecuteReader(Wunion.DataAdapter.Kernel.CommandBuilders.CommandBuilder)">
+            <summary>
+            执行指定的查询命令，并返回相应的数据读取器。
+            </summary>
+            <param name="Command">要执行的查询。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.SqlServerDbAccess.ExecuteScalar(Wunion.DataAdapter.Kernel.CommandBuilders.CommandBuilder)">
+            <summary>
+            执行查询，并返回查询所返回的结果集中第一行的第一列。所有其他的列和行将被忽略。
+            </summary>
+            <param name="Command">要执行的查询。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.SqlServerDbAccess.CreateParameter(System.String,System.Object)">
+            <summary>
+            创建SQL命令参数。
+            </summary>
+            <param name="parameterName">参数名称。</param>
+            <param name="value">参数的值。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wunion.DataAdapter.Kernel.SQLServer.SqlServerDbAccess.CreateParameter(System.String,System.Object,System.Data.ParameterDirection)">
+            <summary>
+            创建 SQL 命令参数。
+            </summary>
+            <param name="parameterName">参数名称。</param>
+            <param name="value">参数的值。</param>
+            <param name="direction">获取或设置一个值，该值指示参数是只可输入、只可输出、双向还是存储过程返回值参数。</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
