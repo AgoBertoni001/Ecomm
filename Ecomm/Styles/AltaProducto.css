@@ -1,0 +1,25 @@
+﻿.alta-producto {
+    display: block;
+    place-content: safe center;
+}
+    .alta-producto ul {
+        list-style: none;
+    }
+.alta-producto ul li {
+    padding: 5px; 
+}
+    .alta-producto ul li input {
+        width: 250px;
+        height: 30px;
+    }
+    .alta-producto ul li select {
+        width: 250px;
+        height: 30px;
+        user-select:none;
+    }
+    .alta-producto ul li button{
+    }
+        .alta-producto ul li a {
+            text-decoration: none;
+            color: black;
+        }

@@ -1,0 +1,15 @@
+﻿.row-productos{
+    background-color: burlywood;
+    padding: 20px;
+}
+.promociones{
+    background-color: white;
+}
+.promociones ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.promociones ul li{
+    display: inline-block;
+}
