@@ -3,26 +3,27 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-		<div>	
+		
 			<h1>PRODUCTOS</h1>		
 
-			 <asp:GridView ID="gvdProductos" runat="server" AutoGenerateColumns="false" DataKeyNames="Codigo" >
+	<asp:GridView ID="gvdProductos" runat="server" AutoGenerateColumns="false" >
                 <Columns>
 
-                    <asp:BoundField DataField="Codigo" HeaderText="Codigo" />
-                    <asp:BoundField DataField="NombreProducto" HeaderText="Nombre Producto" />
-                    <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" />
-                    <asp:BoundField DataField="Precio" HeaderText="Precio" />
-                    <asp:BoundField DataField="Stock" HeaderText="Stock" />
-                    <asp:BoundField DataField="Marca" HeaderText="Marca" /> 
-                    <asp:BoundField DataField="Tipo" HeaderText="Tipo" />
-                    <asp:BoundField DataField="Temporada" HeaderText="Temporada" />
-                    <asp:BoundField DataField="Sexo" HeaderText="Sexo" />
-                    <asp:BoundField DataField="Color" HeaderText="Color" />
-                    <asp:BoundField DataField="Talle" HeaderText="Talle" />
-                    <asp:BoundField DataField="Promocion" HeaderText="Promoción" />
-                    <asp:BoundField DataField="Calificacion" HeaderText="Calificacion" />
-                    <asp:BoundField DataField="Imagen" HeaderText="Imagen" />
+                    <asp:BoundField DataField="codigo" HeaderText="Codigo" />
+                    <asp:BoundField DataField="nombreProducto" HeaderText="Nombre Producto" />
+                    <asp:BoundField DataField="descripcion" HeaderText="Descripción" />
+                    <asp:BoundField DataField="precio" HeaderText="Precio" />
+                    <asp:BoundField DataField="stock" HeaderText="Stock" />
+                    <asp:BoundField DataField="fechaDeAlta" HeaderText="Fecha de alta" />
+                    <asp:BoundField DataField="idMarca" HeaderText="Id Marca" /> 
+                    <asp:BoundField DataField="idTipo" HeaderText="Id Tipo" />
+                    <asp:BoundField DataField="idTemporada" HeaderText="Id Temporada" />
+                    <asp:BoundField DataField="idSexo" HeaderText="Id Sexo" />
+                    <asp:BoundField DataField="idColor" HeaderText="Id Color" />
+                    <asp:BoundField DataField="idTalle" HeaderText="Id Talle" />
+                    <asp:BoundField DataField="idPromocion" HeaderText="Id Promoción" />
+                    <asp:BoundField DataField="idCalificacion" HeaderText="Id Calificacion" />
+                    <asp:BoundField DataField="imagen" HeaderText="Imagen" />
 
 					<asp:TemplateField>
 						<ItemTemplate>
@@ -37,8 +38,8 @@
 					</asp:TemplateField>
 
                 </Columns>
-            </asp:GridView>
-		</div>
+    </asp:GridView>
+		
 	</div>
 
 
@@ -69,7 +70,7 @@
 		                <asp:TextBox ID="txtStock" runat="server"/>
 	                </div>
                     <div>
-		                <asp:Label ID="lblFechaDeAlta" Text="FehaDeAlta" runat="server"></asp:Label>
+		                <asp:Label ID="lblFechaDeAlta" Text="Feha De Alta" runat="server"></asp:Label>
 		                <asp:TextBox ID="txtFechaDeAlta" runat="server"/>
 	                </div>
                     <div>

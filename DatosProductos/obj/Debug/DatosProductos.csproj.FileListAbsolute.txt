@@ -1,4 +1,3 @@
-C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\DatosProductos\bin\Debug\DatosProductos.dll.config
 C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\DatosProductos\bin\Debug\DatosProductos.dll
 C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\DatosProductos\bin\Debug\DatosProductos.pdb
 C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\DatosProductos\obj\Debug\DatosProductos.csproj.AssemblyReference.cache

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace LogicaProducto
     {
         //recursos manejados - permite manejar los recursos de la conexion con la base de datos
         private Component componentes = new Component();
-        DatosProductos.DataClasses1DataContext datosContext;
+        DatosProductos.CatalogoDataContext datosContext;
 
         //indica si ya se llamo al metodo Dispose. (defautl = false)
         private Boolean disposed;
@@ -59,7 +60,7 @@ namespace LogicaProducto
         }
         public OperacionesProductos(string conexion)
         {
-            datosContext = new DatosProductos.DataClasses1DataContext(conexion);
+            datosContext = new DatosProductos.CatalogoDataContext(conexion);
         }
 
         //muestra todo
@@ -69,10 +70,10 @@ namespace LogicaProducto
             DataTable dt = new DataTable();
             try
             {
-                using (DataClasses1DataContext db =new DataClasses1DataContext())
+                using (CatalogoDataContext db =new CatalogoDataContext())
                 {
                     //va al procedimiento almacenado y recupera todos los datos que almacena
-                    return dt = CustomDataTable.CopyToDataTable(db.SPSProductos().ToArray());
+                    return dt = CustomDataTable.CopyToDataTable(db.obtenerProductos().ToArray());
                 }
             }
             catch (Exception)
@@ -89,7 +90,7 @@ namespace LogicaProducto
         {
             try
             {
-                using (DataClasses1DataContext db = new DataClasses1DataContext())
+                using (CatalogoDataContext db = new CatalogoDataContext())
                 {
                     db.insertarProducto(codigo, nombreProducto, descripcion, precio, stock, fechaDeAlta, idMarca, idTipo, idTemporada, idSexo, idColor, idTalle, idPromocion, idCalificacion, imagen);
                     return true;
@@ -108,7 +109,7 @@ namespace LogicaProducto
         {
             try
             {
-                using (DataClasses1DataContext db = new DataClasses1DataContext())
+                using (CatalogoDataContext db = new CatalogoDataContext())
                 {
                     db.eliminaProducto(codigo);
                     return true;
@@ -127,7 +128,7 @@ namespace LogicaProducto
         {
             try
             {
-                using (DataClasses1DataContext db = new DataClasses1DataContext())
+                using (CatalogoDataContext db = new CatalogoDataContext())
                 {
                     db.actualizarProductos(codigo, nombreProducto, descripcion, precio, stock, fechaDeAlta, idMarca, idTipo, idTemporada, idSexo, idColor, idTalle, idPromocion, idCalificacion, imagen);
                     return true;
@@ -146,7 +147,7 @@ namespace LogicaProducto
         {
             try
             {
-                using (DataClasses1DataContext db = new DataClasses1DataContext())
+                using (CatalogoDataContext db = new CatalogoDataContext())
                 {
                     db.modificaProducto(codigo, nombreProducto, descripcion, precio, stock, fechaDeAlta, idMarca, idTipo, idTemporada, idSexo, idColor, idTalle, idPromocion, idCalificacion, imagen);
                     return true;
@@ -160,4 +161,6 @@ namespace LogicaProducto
         #endregion
 
     }
+
+
 }

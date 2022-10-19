@@ -8,6 +8,8 @@ using LogicaProducto;
 using System.Configuration;
 using System.Drawing;
 using static System.Net.Mime.MediaTypeNames;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Ecomm
 {
@@ -20,14 +22,24 @@ namespace Ecomm
             {
                 CargarProductos();
             }
-             
+
         }
         //hace que se llene el gridview
         public void CargarProductos()
         {
-            gvdProductos.DataSource = db.Recupera();
-            gvdProductos.DataBind();
+            //Conexion a base de datos
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "seleccionProductos";
+                cmd.Connection = conn;
+                conn.Open();
+                gvdProductos.DataSource = cmd.ExecuteReader();
+                gvdProductos.DataBind();
+            }
         }
+
 
         public void GuardarProducto(string codigo,string nombreProducto,string descripcion,decimal precio, int stock,string fechaDeAlta,int idMarca,int idTipo,int idTemporada, int idSexo,int idColor,int idTalle,int idPromocion, int idCalificacion,string imagen)
         {
