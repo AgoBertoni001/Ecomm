@@ -71,7 +71,6 @@ C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sist
 C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\Ecomm\bin\Microsoft.AspNet.FriendlyUrls.xml
 C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\Ecomm\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\Ecomm\bin\DatosProductos.pdb
-C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\Ecomm\bin\DatosProductos.dll.config
 C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\Ecomm\bin\es\System.Web.Optimization.resources.dll
 C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\Ecomm\bin\es\Microsoft.AspNet.FriendlyUrls.resources.dll
 C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\Ecomm\obj\Debug\Ecomm.csproj.AssemblyReference.cache

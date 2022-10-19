@@ -2,7 +2,6 @@ C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sist
 C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\LogicaProducto\bin\Debug\LogicaProducto.pdb
 C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\LogicaProducto\bin\Debug\DatosProductos.dll
 C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\LogicaProducto\bin\Debug\DatosProductos.pdb
-C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\LogicaProducto\bin\Debug\DatosProductos.dll.config
 C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\LogicaProducto\obj\Debug\LogicaProducto.csproj.AssemblyReference.cache
 C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\LogicaProducto\obj\Debug\LogicaProducto.csproj.CoreCompileInputs.cache
 C:\Users\Agostina\OneDrive - UTN San Francisco\1.FACULTAD\2022\7.Diseño de sistemas\Programacion\Ecomm\Ecomm\LogicaProducto\obj\Debug\LogicaProducto.csproj.CopyComplete
