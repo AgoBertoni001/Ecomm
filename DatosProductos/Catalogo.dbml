@@ -114,4 +114,71 @@
       <Column Name="Imagen" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.seleccionMarca" Method="seleccionMarca">
+    <ElementType Name="seleccionMarcaResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreMarca" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.seleccionTipo" Method="seleccionTipo">
+    <ElementType Name="seleccionTipoResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreTipo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.seleccionTemporada" Method="seleccionTemporada">
+    <ElementType Name="seleccionTemporadaResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreTemporada" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.seleccionTalle" Method="seleccionTalle">
+    <ElementType Name="seleccionTalleResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Medida" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.seleccionSexo" Method="seleccionSexo">
+    <ElementType Name="seleccionSexoResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreSexo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.seleccionPromocion" Method="seleccionPromocion">
+    <ElementType Name="seleccionPromocionResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombrePromocion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.seleccionProductos" Method="seleccionProductos1">
+    <ElementType Name="seleccionProductosResult1">
+      <Column Name="Codigo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreProducto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Stock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaDeAlta" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdMarca" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdTipo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdTemporada" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdSexo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdColor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdTalle" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdPromocion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdCalificacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Imagen" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.seleccionColor" Method="seleccionColor">
+    <ElementType Name="seleccionColorResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreColor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.seleccionCalificacion" Method="seleccionCalificacion">
+    <ElementType Name="seleccionCalificacionResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Valoracion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

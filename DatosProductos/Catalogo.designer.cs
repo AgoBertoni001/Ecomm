@@ -114,6 +114,69 @@ namespace DatosProductos
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<seleccionProductosResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.seleccionMarca")]
+		public ISingleResult<seleccionMarcaResult> seleccionMarca()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<seleccionMarcaResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.seleccionTipo")]
+		public ISingleResult<seleccionTipoResult> seleccionTipo()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<seleccionTipoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.seleccionTemporada")]
+		public ISingleResult<seleccionTemporadaResult> seleccionTemporada()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<seleccionTemporadaResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.seleccionTalle")]
+		public ISingleResult<seleccionTalleResult> seleccionTalle()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<seleccionTalleResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.seleccionSexo")]
+		public ISingleResult<seleccionSexoResult> seleccionSexo()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<seleccionSexoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.seleccionPromocion")]
+		public ISingleResult<seleccionPromocionResult> seleccionPromocion()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<seleccionPromocionResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.seleccionProductos")]
+		public ISingleResult<seleccionProductosResult1> seleccionProductos1()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<seleccionProductosResult1>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.seleccionColor")]
+		public ISingleResult<seleccionColorResult> seleccionColor()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<seleccionColorResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.seleccionCalificacion")]
+		public ISingleResult<seleccionCalificacionResult> seleccionCalificacion()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<seleccionCalificacionResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Producto")]
@@ -526,10 +589,10 @@ namespace DatosProductos
 		private System.Nullable<decimal> _precio;
 		
 		private System.Nullable<int> _stock;
-
-        private string _fechaDeAlta;
-
-        private System.Nullable<int> _idMarca;
+		
+		private string _fechaDeAlta;
+		
+		private System.Nullable<int> _idMarca;
 		
 		private System.Nullable<int> _idTipo;
 		
@@ -804,7 +867,6 @@ namespace DatosProductos
 		private System.Nullable<decimal> _Precio;
 		
 		private System.Nullable<int> _Stock;
-		private string _FechaDeAlta; 
 		
 		private System.Nullable<int> _Marca;
 		
@@ -907,24 +969,8 @@ namespace DatosProductos
 				}
 			}
 		}
-
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_FechaDeAlta", DbType = "NVarChar(250)")]
-        public string FechaDeAlta
-        {
-            get
-            {
-                return this._FechaDeAlta;
-            }
-            set
-            {
-                if ((this._FechaDeAlta != value))
-                {
-                    this._FechaDeAlta = value;
-                }
-            }
-        }
-
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Marca", DbType="Int")]
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Marca", DbType="Int")]
 		public System.Nullable<int> Marca
 		{
 			get
@@ -1064,6 +1110,636 @@ namespace DatosProductos
 				if ((this._Imagen != value))
 				{
 					this._Imagen = value;
+				}
+			}
+		}
+	}
+	
+	public partial class seleccionMarcaResult
+	{
+		
+		private int _ID;
+		
+		private string _NombreMarca;
+		
+		public seleccionMarcaResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NombreMarca", DbType="NVarChar(50)")]
+		public string NombreMarca
+		{
+			get
+			{
+				return this._NombreMarca;
+			}
+			set
+			{
+				if ((this._NombreMarca != value))
+				{
+					this._NombreMarca = value;
+				}
+			}
+		}
+	}
+	
+	public partial class seleccionTipoResult
+	{
+		
+		private int _ID;
+		
+		private string _NombreTipo;
+		
+		public seleccionTipoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NombreTipo", DbType="NVarChar(50)")]
+		public string NombreTipo
+		{
+			get
+			{
+				return this._NombreTipo;
+			}
+			set
+			{
+				if ((this._NombreTipo != value))
+				{
+					this._NombreTipo = value;
+				}
+			}
+		}
+	}
+	
+	public partial class seleccionTemporadaResult
+	{
+		
+		private int _ID;
+		
+		private string _NombreTemporada;
+		
+		public seleccionTemporadaResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NombreTemporada", DbType="NVarChar(50)")]
+		public string NombreTemporada
+		{
+			get
+			{
+				return this._NombreTemporada;
+			}
+			set
+			{
+				if ((this._NombreTemporada != value))
+				{
+					this._NombreTemporada = value;
+				}
+			}
+		}
+	}
+	
+	public partial class seleccionTalleResult
+	{
+		
+		private int _ID;
+		
+		private string _Medida;
+		
+		public seleccionTalleResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Medida", DbType="NVarChar(50)")]
+		public string Medida
+		{
+			get
+			{
+				return this._Medida;
+			}
+			set
+			{
+				if ((this._Medida != value))
+				{
+					this._Medida = value;
+				}
+			}
+		}
+	}
+	
+	public partial class seleccionSexoResult
+	{
+		
+		private int _ID;
+		
+		private string _NombreSexo;
+		
+		public seleccionSexoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NombreSexo", DbType="NVarChar(50)")]
+		public string NombreSexo
+		{
+			get
+			{
+				return this._NombreSexo;
+			}
+			set
+			{
+				if ((this._NombreSexo != value))
+				{
+					this._NombreSexo = value;
+				}
+			}
+		}
+	}
+	
+	public partial class seleccionPromocionResult
+	{
+		
+		private int _ID;
+		
+		private string _NombrePromocion;
+		
+		public seleccionPromocionResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NombrePromocion", DbType="NVarChar(50)")]
+		public string NombrePromocion
+		{
+			get
+			{
+				return this._NombrePromocion;
+			}
+			set
+			{
+				if ((this._NombrePromocion != value))
+				{
+					this._NombrePromocion = value;
+				}
+			}
+		}
+	}
+	
+	public partial class seleccionProductosResult1
+	{
+		
+		private string _Codigo;
+		
+		private string _NombreProducto;
+		
+		private string _Descripcion;
+		
+		private System.Nullable<decimal> _Precio;
+		
+		private System.Nullable<int> _Stock;
+		
+		private string _FechaDeAlta;
+		
+		private System.Nullable<int> _IdMarca;
+		
+		private System.Nullable<int> _IdTipo;
+		
+		private System.Nullable<int> _IdTemporada;
+		
+		private System.Nullable<int> _IdSexo;
+		
+		private System.Nullable<int> _IdColor;
+		
+		private System.Nullable<int> _IdTalle;
+		
+		private System.Nullable<int> _IdPromocion;
+		
+		private System.Nullable<int> _IdCalificacion;
+		
+		private string _Imagen;
+		
+		public seleccionProductosResult1()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codigo", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Codigo
+		{
+			get
+			{
+				return this._Codigo;
+			}
+			set
+			{
+				if ((this._Codigo != value))
+				{
+					this._Codigo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NombreProducto", DbType="NVarChar(50)")]
+		public string NombreProducto
+		{
+			get
+			{
+				return this._NombreProducto;
+			}
+			set
+			{
+				if ((this._NombreProducto != value))
+				{
+					this._NombreProducto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="NVarChar(250)")]
+		public string Descripcion
+		{
+			get
+			{
+				return this._Descripcion;
+			}
+			set
+			{
+				if ((this._Descripcion != value))
+				{
+					this._Descripcion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Precio", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> Precio
+		{
+			get
+			{
+				return this._Precio;
+			}
+			set
+			{
+				if ((this._Precio != value))
+				{
+					this._Precio = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stock", DbType="Int")]
+		public System.Nullable<int> Stock
+		{
+			get
+			{
+				return this._Stock;
+			}
+			set
+			{
+				if ((this._Stock != value))
+				{
+					this._Stock = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FechaDeAlta", DbType="NVarChar(50)")]
+		public string FechaDeAlta
+		{
+			get
+			{
+				return this._FechaDeAlta;
+			}
+			set
+			{
+				if ((this._FechaDeAlta != value))
+				{
+					this._FechaDeAlta = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdMarca", DbType="Int")]
+		public System.Nullable<int> IdMarca
+		{
+			get
+			{
+				return this._IdMarca;
+			}
+			set
+			{
+				if ((this._IdMarca != value))
+				{
+					this._IdMarca = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdTipo", DbType="Int")]
+		public System.Nullable<int> IdTipo
+		{
+			get
+			{
+				return this._IdTipo;
+			}
+			set
+			{
+				if ((this._IdTipo != value))
+				{
+					this._IdTipo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdTemporada", DbType="Int")]
+		public System.Nullable<int> IdTemporada
+		{
+			get
+			{
+				return this._IdTemporada;
+			}
+			set
+			{
+				if ((this._IdTemporada != value))
+				{
+					this._IdTemporada = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdSexo", DbType="Int")]
+		public System.Nullable<int> IdSexo
+		{
+			get
+			{
+				return this._IdSexo;
+			}
+			set
+			{
+				if ((this._IdSexo != value))
+				{
+					this._IdSexo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdColor", DbType="Int")]
+		public System.Nullable<int> IdColor
+		{
+			get
+			{
+				return this._IdColor;
+			}
+			set
+			{
+				if ((this._IdColor != value))
+				{
+					this._IdColor = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdTalle", DbType="Int")]
+		public System.Nullable<int> IdTalle
+		{
+			get
+			{
+				return this._IdTalle;
+			}
+			set
+			{
+				if ((this._IdTalle != value))
+				{
+					this._IdTalle = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPromocion", DbType="Int")]
+		public System.Nullable<int> IdPromocion
+		{
+			get
+			{
+				return this._IdPromocion;
+			}
+			set
+			{
+				if ((this._IdPromocion != value))
+				{
+					this._IdPromocion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCalificacion", DbType="Int")]
+		public System.Nullable<int> IdCalificacion
+		{
+			get
+			{
+				return this._IdCalificacion;
+			}
+			set
+			{
+				if ((this._IdCalificacion != value))
+				{
+					this._IdCalificacion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Imagen", DbType="NVarChar(250)")]
+		public string Imagen
+		{
+			get
+			{
+				return this._Imagen;
+			}
+			set
+			{
+				if ((this._Imagen != value))
+				{
+					this._Imagen = value;
+				}
+			}
+		}
+	}
+	
+	public partial class seleccionColorResult
+	{
+		
+		private int _ID;
+		
+		private string _NombreColor;
+		
+		public seleccionColorResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NombreColor", DbType="NVarChar(50)")]
+		public string NombreColor
+		{
+			get
+			{
+				return this._NombreColor;
+			}
+			set
+			{
+				if ((this._NombreColor != value))
+				{
+					this._NombreColor = value;
+				}
+			}
+		}
+	}
+	
+	public partial class seleccionCalificacionResult
+	{
+		
+		private int _ID;
+		
+		private string _Valoracion;
+		
+		public seleccionCalificacionResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Valoracion", DbType="NVarChar(50)")]
+		public string Valoracion
+		{
+			get
+			{
+				return this._Valoracion;
+			}
+			set
+			{
+				if ((this._Valoracion != value))
+				{
+					this._Valoracion = value;
 				}
 			}
 		}

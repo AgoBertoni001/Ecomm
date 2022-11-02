@@ -2,7 +2,85 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
+    
+
+	<div class="jumbotron">
+		<asp:Button ID="btnNuevoProducto" runat="server" OnClick="btnNuevoProducto_Click" Text="Nuevo Producto"/>
+	</div>
+
+    
+	            <asp:Panel ID="pnlAltaProdcucto" runat="server" Visible="false">
+                    <div>
+		                <asp:Label ID="lblCodigo" Text="Codigo" runat="server"></asp:Label>
+		                <asp:TextBox ID="txtCodigo" runat="server"/>
+	                </div>
+	                <div>
+		                <asp:Label ID="lblNombre" Text="Nombre" runat="server"></asp:Label>
+		                <asp:TextBox ID="txtNombre" runat="server"/>
+	                </div>
+	                <div>
+		                <asp:Label ID="lblDescripcion" Text="Descripcion" runat="server"></asp:Label>
+		                <asp:TextBox ID="txtDescripcion" runat="server"/>
+	                </div>
+                    <div>
+		                <asp:Label ID="lblPrecio" Text="Precio" runat="server"></asp:Label>
+		                <asp:TextBox ID="txtPrecio" runat="server"/>
+	                </div>
+                    <div>
+		                <asp:Label ID="lblStock" Text="Stock" runat="server"></asp:Label>
+		                <asp:TextBox ID="txtStock" runat="server"/>
+	                </div>
+                    <div>
+		                <asp:Label ID="lblFechaDeAlta" Text="Feha De Alta" runat="server"></asp:Label>
+		                <asp:TextBox ID="txtFechaDeAlta" runat="server"/>
+	                </div>
+                    <div>
+		                <asp:Label ID="lblIdMarca" Text="Marca" runat="server"></asp:Label>
+						<asp:DropDownList ID="ddlMarca" runat="server" OnSelectedIndexChanged="ddlMarca_SelectedIndexChanged" AutoPostBack="true" Width="300"/>
+	                </div>
+                    <div>
+		                <asp:Label ID="lblIdTipo" Text="Tipo" runat="server"></asp:Label>
+		                <asp:DropDownList ID="ddlTipo" runat="server" OnSelectedIndexChanged="ddlTipo_SelectedIndexChanged" AutoPostBack="true" Width="300"/>
+	                </div>
+                    <div>
+		                <asp:Label ID="lblIdTemporada" Text="Temporada" runat="server"></asp:Label>
+		                <asp:DropDownList ID="ddlTemporada" runat="server" OnSelectedIndexChanged="ddlTemporada_SelectedIndexChanged" AutoPostBack="true" Width="300"/>
+	                </div>
+                    <div>
+		                <asp:Label ID="lblIdSexo" Text="Sexo" runat="server"></asp:Label>
+		                <asp:DropDownList ID="ddlSexo" runat="server" OnSelectedIndexChanged="ddlSexo_SelectedIndexChanged" AutoPostBack="true" Width="300"/>
+	                </div>
+                    <div>
+		                <asp:Label ID="lblIdColor" Text="Color" runat="server"></asp:Label>
+		                <asp:DropDownList ID="ddlColor" runat="server" OnSelectedIndexChanged="ddlColor_SelectedIndexChanged" AutoPostBack="true" Width="300"/>
+	                </div>
+                    <div>
+		                <asp:Label ID="lblIdTalle" Text="Talle" runat="server"></asp:Label>
+		                <asp:DropDownList ID="ddlTalle" runat="server" OnSelectedIndexChanged="ddlTalle_SelectedIndexChanged" AutoPostBack="true" Width="300"/>
+	                </div>
+					 <div>
+		                <asp:Label ID="lblIdPromocion" Text="Promocion" runat="server"></asp:Label>
+		                <asp:DropDownList ID="ddlPromocion" runat="server" OnSelectedIndexChanged="ddlPromocion_SelectedIndexChanged" AutoPostBack="true" Width="300"/>
+	                </div>
+                    <div>
+		                <asp:Label ID="lblIdCalificacion" Text="Calificacion" runat="server"></asp:Label>
+		                <asp:DropDownList ID="ddlCalificacion" runat="server" OnSelectedIndexChanged="ddlCalificacion_SelectedIndexChanged" AutoPostBack="true" Width="300"/>
+	                </div>
+                    <div>
+		                <asp:Label ID="lblImagen" Text="Imagen" runat="server"></asp:Label>
+		                <asp:TextBox ID="txtImagen" runat="server"/>
+	                </div>
+	                <br />
+                
+                    <br />
+                <asp:Button ID="btnGuardarProducto" runat="server" Text="Guardar Producto" OnClick="btnGuardarProducto_Click" />
+				<asp:Button ID="btnActualizar" runat="server" Text="Actualizar Producto" OnClick="btnActualizar_Click" />
+                </asp:Panel>
+
+
+
+
+	<div class="jumbotron">
 		
 			<h1>PRODUCTOS</h1>		
 
@@ -43,82 +121,6 @@
 	</div>
 
 
-	<div>
-		<asp:Button ID="btnNuevoProducto" runat="server" OnClick="btnNuevoProducto_Click" Text="Nuevo Producto"/>
-	</div>
 
-    
-	            <asp:Panel ID="pnlAltaProdcucto" runat="server" Visible="false">
-                    <div>
-		                <asp:Label ID="lblCodigo" Text="Codigo" runat="server"></asp:Label>
-		                <asp:TextBox ID="txtCodigo" runat="server"/>
-	                </div>
-	                <div>
-		                <asp:Label ID="lblNombre" Text="Nombre" runat="server"></asp:Label>
-		                <asp:TextBox ID="txtNombre" runat="server"/>
-	                </div>
-	                <div>
-		                <asp:Label ID="lblDescripcion" Text="Descripcion" runat="server"></asp:Label>
-		                <asp:TextBox ID="txtDescripcion" runat="server"/>
-	                </div>
-                    <div>
-		                <asp:Label ID="lblPrecio" Text="Precio" runat="server"></asp:Label>
-		                <asp:TextBox ID="txtPrecio" runat="server"/>
-	                </div>
-                    <div>
-		                <asp:Label ID="lblStock" Text="Stock" runat="server"></asp:Label>
-		                <asp:TextBox ID="txtStock" runat="server"/>
-	                </div>
-                    <div>
-		                <asp:Label ID="lblFechaDeAlta" Text="Feha De Alta" runat="server"></asp:Label>
-		                <asp:TextBox ID="txtFechaDeAlta" runat="server"/>
-	                </div>
-                    <div>
-		                <asp:Label ID="lblIdMarca" Text="Marca" runat="server"></asp:Label>
-		                <asp:TextBox ID="txtIdMarca" runat="server"/>
-	                </div>
-                    <div>
-		                <asp:Label ID="lblIdTipo" Text="Tipo" runat="server"></asp:Label>
-		                <asp:TextBox ID="txtIdTipo" runat="server"/>
-	                </div>
-                    <div>
-		                <asp:Label ID="lblIdTemporada" Text="Temporada" runat="server"></asp:Label>
-		                <asp:TextBox ID="txtIdTemporada" runat="server"/>
-	                </div>
-                    <div>
-		                <asp:Label ID="lblIdSexo" Text="Sexo" runat="server"></asp:Label>
-		                <asp:TextBox ID="txtIdSexo" runat="server"/>
-	                </div>
-                    <div>
-		                <asp:Label ID="lblIdColor" Text="Color" runat="server"></asp:Label>
-		                <asp:TextBox ID="txtIdColor" runat="server"/>
-	                </div>
-                    <div>
-		                <asp:Label ID="lblIdTalle" Text="Talle" runat="server"></asp:Label>
-		                <asp:TextBox ID="txtIdTalle" runat="server"/>
-	                </div>
-					 <div>
-		                <asp:Label ID="lblIdPromocion" Text="Promocion" runat="server"></asp:Label>
-		                <asp:TextBox ID="txtIdPromocion" runat="server"/>
-	                </div>
-                    <div>
-		                <asp:Label ID="lblIdCalificacion" Text="Calificacion" runat="server"></asp:Label>
-		                <asp:TextBox ID="txtIdCalificacion" runat="server"/>
-	                </div>
-                    <div>
-		                <asp:Label ID="lblImagen" Text="Imagen" runat="server"></asp:Label>
-		                <asp:TextBox ID="txtImagen" runat="server"/>
-	                </div>
-	                <br />
-                
-                    <br />
-                <asp:Button ID="btnGuardarProducto" runat="server" Text="Guardar Producto" OnClick="btnGuardarProducto_Click" />
-				<asp:Button ID="btnActualizar" runat="server" Text="Actualizar Producto" OnClick="btnActualizar_Click" />
-                </asp:Panel>
-
-
-
-
-   
 
 </asp:Content>

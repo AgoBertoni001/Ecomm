@@ -15,15 +15,6 @@ namespace Ecomm
     {
 
         /// <summary>
-        /// Control gvdProductos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvdProductos;
-
-        /// <summary>
         /// Control btnNuevoProducto.
         /// </summary>
         /// <remarks>
@@ -159,13 +150,13 @@ namespace Ecomm
         protected global::System.Web.UI.WebControls.Label lblIdMarca;
 
         /// <summary>
-        /// Control txtIdMarca.
+        /// Control ddlMarca.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdMarca;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMarca;
 
         /// <summary>
         /// Control lblIdTipo.
@@ -177,13 +168,13 @@ namespace Ecomm
         protected global::System.Web.UI.WebControls.Label lblIdTipo;
 
         /// <summary>
-        /// Control txtIdTipo.
+        /// Control ddlTipo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdTipo;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTipo;
 
         /// <summary>
         /// Control lblIdTemporada.
@@ -195,13 +186,13 @@ namespace Ecomm
         protected global::System.Web.UI.WebControls.Label lblIdTemporada;
 
         /// <summary>
-        /// Control txtIdTemporada.
+        /// Control ddlTemporada.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdTemporada;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTemporada;
 
         /// <summary>
         /// Control lblIdSexo.
@@ -213,13 +204,13 @@ namespace Ecomm
         protected global::System.Web.UI.WebControls.Label lblIdSexo;
 
         /// <summary>
-        /// Control txtIdSexo.
+        /// Control ddlSexo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdSexo;
+        protected global::System.Web.UI.WebControls.DropDownList ddlSexo;
 
         /// <summary>
         /// Control lblIdColor.
@@ -231,13 +222,13 @@ namespace Ecomm
         protected global::System.Web.UI.WebControls.Label lblIdColor;
 
         /// <summary>
-        /// Control txtIdColor.
+        /// Control ddlColor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdColor;
+        protected global::System.Web.UI.WebControls.DropDownList ddlColor;
 
         /// <summary>
         /// Control lblIdTalle.
@@ -249,13 +240,13 @@ namespace Ecomm
         protected global::System.Web.UI.WebControls.Label lblIdTalle;
 
         /// <summary>
-        /// Control txtIdTalle.
+        /// Control ddlTalle.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdTalle;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTalle;
 
         /// <summary>
         /// Control lblIdPromocion.
@@ -267,13 +258,13 @@ namespace Ecomm
         protected global::System.Web.UI.WebControls.Label lblIdPromocion;
 
         /// <summary>
-        /// Control txtIdPromocion.
+        /// Control ddlPromocion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdPromocion;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPromocion;
 
         /// <summary>
         /// Control lblIdCalificacion.
@@ -285,13 +276,13 @@ namespace Ecomm
         protected global::System.Web.UI.WebControls.Label lblIdCalificacion;
 
         /// <summary>
-        /// Control txtIdCalificacion.
+        /// Control ddlCalificacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdCalificacion;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCalificacion;
 
         /// <summary>
         /// Control lblImagen.
@@ -328,5 +319,14 @@ namespace Ecomm
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnActualizar;
+
+        /// <summary>
+        /// Control gvdProductos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvdProductos;
     }
 }
